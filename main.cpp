@@ -19,6 +19,8 @@ int main(void){
     for(int i = height;i>0;i--){
         spaces(i);
         hashes(count);
+        spaces(3);
+        hashes(count);
         printf("\n");
         count+=1;
     }

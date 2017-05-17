@@ -9,9 +9,16 @@ int main(void){
 
     int height;
 
-    cout << "Enter the height of the mario pyramid: ";
-    cin >> height;
 
+        cout << "Enter the height of the mario pyramid: ";
+        cin >> height;
+
+    while(!cin){
+        cin.clear(); // reset failbit
+        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        cout << "Enter the height of the mario pyramid: ";
+        cin >> height;
+    }
 
     int count = 2;
     printf("# \n");
